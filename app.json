@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "Expense Book",
+    "slug": "ExpenseBook",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.6",
+    "orientation": "portrait",
+    "icon": "./assets/book1.png",
+    "splash": {
+      "image": "./assets/1.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.akashan.ExpenseBook",
+      "versionCode": 7
+    }
+  }
+}
