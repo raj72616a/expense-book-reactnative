@@ -1,0 +1,36 @@
+{
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "containerDefinitions": [
+        {
+            "environment": [
+                {
+                    "name": "WAIT_HOSTS",
+                    "value": "mongo:27017"
+                }
+            ],
+            "essential": true,
+            "memory": 100,
+            "image": "raj72616a/expense-book-web:latest",
+            "links": [
+                "mongo"
+            ],
+            "name": "express",
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 8080
+                }
+            ]
+        },
+        {
+            "essential": true,
+            "memory": 100,
+            "image": "mongo:4.0.9",
+            "name": "mongo"
+        }
+    ],
+    "networkMode": "bridge",
+    "family" : "expensebook"
+}

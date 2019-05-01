@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+ mongo: 
+  image: mongo:4.0.9 
+  expose:
+  - "27017"
+ 
+ express: 
+  image: raj72616a/expense-book-web:latest 
+  ports:
+  - "8080:8080" 
+  links:
+  - mongo 
+  depends_on:
+  - mongo
+  environment:
+    WAIT_HOSTS: mongo:27017
+ 
